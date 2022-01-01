@@ -19,3 +19,47 @@ body {
 }
 
 
+// global links style
+a, a:active, a:visited {
+  text-decoration: none;
+  user-select: none;
+}
+
+
+// global buttons style
+button, .button{
+  background-color: brown;
+  border: none;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(to right, $primary_color, $primary_color_medium);
+}
+
+h1, h2, h3{
+	margin-top: 0;
+}
+
+///spacing
+.container{
+  max-width: 1440px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/// hide element for mobile view
+.hide-for-mobile{
+  @include breakpoint-up(medium){
+    display: none;
+  }
+}
+
+/// hide element for desktop view
+.hide-for-desktop{
+  @include breakpoint-down(medium){
+    display: none;
+  }
+}
+
+

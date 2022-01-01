@@ -13,9 +13,40 @@
 </head>
 
 <body>
-  <h1>Home page</h1>
+  <header class="header">
+    <nav class="nav container">
+      <a href="/">
+        <img src="/images/svgs/logo.svg" alt="logo">
+      </a>
+
+      <div class="hide-for-mobile">
+      <ul class="nav__links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">Price</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+      <div class="nav__hamburger hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <button type="button" class="nav__button hide-for-mobile">Discover</button>
+    </nav>
+  </header>
 </body>
 
 
 <script src="/src/js/index.js"></script>
+
 </html>

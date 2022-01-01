@@ -1,0 +1,85 @@
+.nav{
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2.5rem;
+  font-weight: 400;
+  
+  /// logo
+  img{
+    height: 100%;
+    width: 12rem;
+  }
+
+  /// navigation links
+  &__links{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    > li:not(:last-child){
+      padding-right: 2rem;
+    }  
+    
+    a{
+      color: $darkGray;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -25px;
+        width: 100%;
+        background: linear-gradient(to right, $primary_color, $primary_color_medium);
+        height: 5px;
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+      }
+      
+      &:hover{
+        &::before{
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+
+  ///// menu button
+  &__hamburger {
+    min-width: 30px;
+    > span{
+      min-height: 4px;
+      min-width: 100%;
+      background-color: $primary_color;
+      display: block;
+      transform-origin: 3.5px 2px;
+      transition: .5s ease-in-out;
+      &:not(:last-child){
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  /// menu button close/open animation
+  .open{
+    > span:first-child{
+       transform: rotate(45deg);
+     }
+     
+     > span:nth-child(2){
+       opacity: 0;
+       transform: translateX(-20%);
+       overflow: hidden;
+     }
+ 
+     > span:last-child{
+       transform: rotate(-45deg);
+       
+     }
+   }
+
+}
+
