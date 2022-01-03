@@ -3,10 +3,12 @@
   min-height: 700px;
 	padding-bottom: 3rem;
 	padding-top: 1rem;
+	margin-bottom: 15rem;
   background-image: url(/images/svgs/bg2.svg);
   @include breakpoint-up(x-large) {
     height: 550px;
     min-height: 550px;
+    margin-bottom: 8rem;
   }
 
   @include breakpoint-up(large) {

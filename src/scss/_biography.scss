@@ -1,0 +1,80 @@
+.biography {
+  display: flex;
+  background-image: url("/images/svgs/biography-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: right;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+  min-height: 500px;
+  height: 500px;
+  @include breakpoint-up(medium) {
+    display: block;
+    height: 100%;
+  }
+
+  &__image {
+    flex: 1;
+    //background-color: black;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/svgs/biography-image.svg");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    margin-right: 5rem;
+    @include breakpoint-up(medium) {
+      margin-bottom: 5rem;
+      background-position: center;
+      margin-right: 0;
+      background-size: contain;
+      height: 30rem;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    align-self: center;
+
+    h2 {
+      font-size: 5rem;
+      color: $darkGray;
+      position: relative;
+      @include breakpoint-up(x-large) {
+        font-size: 4rem;
+      }
+
+      @include breakpoint-up(large) {
+        font-size: 3rem;
+      }
+
+      &::before {
+        content: "Biography";
+        position: absolute;
+        font-size: 2rem;
+        font-weight: 300;
+        top: -3rem;
+        left: 0;
+        color: blueviolet;
+      }
+    }
+
+    p {
+      color: $lightGray;
+      font-size: 2rem;
+      line-height: 1.7;
+      margin-top: 0;
+      @include breakpoint-up(x-large) {
+        font-size: 1.5rem;
+      }
+      @include breakpoint-up(large) {
+        font-size: 1.3rem;
+      }
+    }
+
+    .button {
+      padding: 1rem 3rem;
+    }
+  }
+}
