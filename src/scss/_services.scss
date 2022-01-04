@@ -1,0 +1,88 @@
+.services {
+  background-image: url("/images//svgs/services-bg.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  h2 {
+    font-size: 5rem;
+    position: relative;
+    color: $darkGray;
+    @include breakpoint-up(x-large) {
+      font-size: 4rem;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: 3rem;
+    }
+    &::before {
+      content: "OUR SERVICES";
+      position: absolute;
+      font-size: 2rem;
+      font-weight: 300;
+      top: -3rem;
+      left: 0;
+      color: blueviolet;
+    }
+  }
+
+  &__cards {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 11rem;
+    @include breakpoint-up(x-large) {
+      gap: 5rem;
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+    }
+
+    > div {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      img {
+        width: 8rem;
+        margin: 0 auto;
+      }
+
+      .text-content {
+        height: 100%;
+        margin-bottom: 2rem;
+      }
+
+      h4 {
+        color: $darkGray;
+
+        justify-self: start;
+        font-weight: 700;
+      }
+
+      p {
+        color: $lightGray;
+        font-size: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: 700;
+        align-self: start;
+      }
+    }
+  }
+}

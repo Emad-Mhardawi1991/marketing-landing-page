@@ -47,8 +47,8 @@ h1, h2, h3 {
   display: block;
   margin: 0 auto;
   padding-left: 5rem;
-  padding-right: 2rem;
-  margin-bottom: 8rem;
+  padding-right: 5rem;
+  margin-bottom: 10rem;
 }
 
 @media (max-width: 767px) {
@@ -334,7 +334,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10rem;
+  margin-bottom: 15rem;
   min-height: 500px;
   height: 500px;
 }
@@ -427,4 +427,120 @@ header {
 
 .biography__text .button {
   padding: 1rem 3rem;
+}
+
+.services {
+  background-image: url("/images//svgs/services-bg.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.services h2 {
+  font-size: 5rem;
+  position: relative;
+  color: #42495B;
+}
+
+@media (max-width: 1439px) {
+  .services h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .services h2 {
+    font-size: 3rem;
+  }
+}
+
+.services h2::before {
+  content: "OUR SERVICES";
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 300;
+  top: -3rem;
+  left: 0;
+  color: blueviolet;
+}
+
+.services__cards {
+  padding: 3rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 11rem;
+}
+
+@media (max-width: 1439px) {
+  .services__cards {
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .services__cards {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .services__cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
+
+.services__cards > div {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services__cards > div img {
+  width: 8rem;
+  margin: 0 auto;
+}
+
+.services__cards > div .text-content {
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.services__cards > div h4 {
+  color: #42495B;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  font-weight: 700;
+}
+
+.services__cards > div p {
+  color: #7A839E;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.services__cards > div .button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
