@@ -34,6 +34,7 @@ button, .button{
   color: white;
   font-weight: 700;
   background: linear-gradient(to right, $primary_color, $primary_color_medium);
+  cursor: pointer;
 }
 
 h1, h2, h3{

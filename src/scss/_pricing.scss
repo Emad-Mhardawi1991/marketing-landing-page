@@ -1,5 +1,4 @@
 .pricing {
-  margin-bottom: 10rem;
   padding-bottom: 10rem;
   height: 100%;
   background: url(/images/svgs/pricing-bg.svg);
@@ -13,6 +12,13 @@
     font-size: 5rem;
     color: $darkGray;
     position: relative;
+    @include breakpoint-up(x-large) {
+      font-size: 4rem;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: 3rem;
+    }
 
     &::before {
       content: "Price";
@@ -48,7 +54,6 @@
     }
 
     > div {
-      background-color: yellowgreen;
       position: relative;
       transform-style: preserve-3d;
       border-radius: 10px;

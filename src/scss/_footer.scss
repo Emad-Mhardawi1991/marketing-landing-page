@@ -1,0 +1,82 @@
+.footer {
+  min-height: 600px;
+  background-color: #37383d;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3rem;
+  padding-top: 8rem;
+  @include breakpoint-up(medium) {
+    min-height: 450px;
+  }
+
+  &__subscribe {
+    color: white;
+    font-size: 3rem;
+    @include breakpoint-up(medium) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__form {
+    position: relative;
+    width: 40rem;
+    display: flex;
+    @include breakpoint-up(medium) {
+      width: 30rem;
+    }
+    input {
+      border: none;
+      padding: 1.5rem 1rem;
+      width: 100%;
+      margin-right: 2rem;
+      @include breakpoint-up(medium) {
+        padding: 1rem 1rem;
+      }
+    }
+  }
+
+  .divider {
+    width: 90%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.39);
+    margin: 10rem auto;
+    margin-bottom: 5rem;
+    border: none;
+    @include breakpoint-up(medium) {
+      margin: 5rem auto;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    @include breakpoint-up(medium) {
+      margin: 0;
+    }
+    > li:not(:last-child) {
+      padding-right: 2rem;
+    }
+
+    a {
+      color: white;
+      @include breakpoint-up(medium) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.footer__copy {
+  font-size: 1.5rem;
+  color: white;
+  padding-top: 5rem;
+  @include breakpoint-up(medium) {
+    font-size: 1.3rem;
+  }
+}
