@@ -27,8 +27,7 @@ a, a:active, a:visited {
 
 
 // global buttons style
-button, .button{
-  background-color: brown;
+.button{
   border: none;
   padding: 1rem 2rem;
   color: white;
@@ -71,3 +70,14 @@ h1, h2, h3{
 }
 
 
+
+
+.message{
+  background-color: yellow;
+  margin: 0;
+  padding: 0;
+  p{
+    margin: 0;
+    padding: 2rem;
+  }
+}

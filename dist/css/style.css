@@ -28,8 +28,7 @@ a, a:active, a:visited {
           user-select: none;
 }
 
-button, .button {
-  background-color: brown;
+.button {
   border: none;
   padding: 1rem 2rem;
   color: white;
@@ -71,8 +70,20 @@ h1, h2, h3 {
   }
 }
 
+.message {
+  background-color: yellow;
+  margin: 0;
+  padding: 0;
+}
+
+.message p {
+  margin: 0;
+  padding: 2rem;
+}
+
 header {
-  background-color: rgba(128, 128, 128, 0.089);
+  background-color: gainsboro;
+  opacity: 1;
 }
 
 .nav {
@@ -116,7 +127,12 @@ header {
 
 .nav__links a {
   color: #42495B;
+  cursor: pointer;
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .nav__links a::before {
@@ -173,13 +189,24 @@ header {
           transform: rotate(-45deg);
 }
 
+.sticky-nav {
+  background-color: gainsboro;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  opacity: 0;
+  -webkit-transition: 0.5s  ease-out;
+  transition: 0.5s  ease-out;
+  opacity: 1;
+}
+
 .hero-container {
   height: 700px;
   min-height: 700px;
   padding-bottom: 3rem;
   padding-top: 1rem;
   margin-bottom: 15rem;
-  background-image: url(/images/svgs/bg2.svg);
+  background-image: url(../../images/svgs/bg2.svg);
 }
 
 @media (max-width: 1439px) {
@@ -219,6 +246,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -239,7 +267,7 @@ header {
           flex: 1;
   width: 100%;
   height: 100%;
-  background-image: url(/images/svgs/hero-image.svg);
+  background-image: url("../../images/svgs/hero-image.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
@@ -325,7 +353,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url("/images/svgs/biography-bg.svg");
+  background-image: url("../../images/svgs/biography-bg.svg");
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: right;
@@ -353,7 +381,7 @@ header {
           flex: 1;
   width: 100%;
   height: 100%;
-  background-image: url("/images/svgs/biography-image.svg");
+  background-image: url("../../images/svgs/biography-image.svg");
   background-repeat: no-repeat;
   background-position: center left;
   background-size: contain;
@@ -431,7 +459,7 @@ header {
 }
 
 .services {
-  background-image: url("/images//svgs/services-bg.svg");
+  background-image: url("../../images//svgs/services-bg.svg");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -549,7 +577,7 @@ header {
 .pricing {
   padding-bottom: 10rem;
   height: 100%;
-  background: url(/images/svgs/pricing-bg.svg);
+  background: url(../../images/svgs/pricing-bg.svg);
   background-color: #B7CDFE;
   background-position: center;
   background-size: contain;
@@ -743,9 +771,288 @@ header {
   color: #784799;
 }
 
-.testimonials {
-  min-height: 600px;
-  background-color: gold;
+.testimonials h2 {
+  font-size: 5rem;
+  position: relative;
+  color: #42495B;
+  margin-top: 8rem;
+  text-align: center;
+}
+
+@media (max-width: 1439px) {
+  .testimonials h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .testimonials h2 {
+    font-size: 3rem;
+  }
+}
+
+.testimonials h2::before {
+  content: "TESTIMONIALS";
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0;
+  color: blueviolet;
+}
+
+.testimonials h2 span {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .testimonials h2 span {
+    font-size: 1.5rem;
+  }
+}
+
+.testimonials .slider {
+  max-width: 100rem;
+  margin: 0 auto;
+  min-height: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .testimonials .slider {
+    min-height: 40rem;
+  }
+}
+
+.testimonials .slider .slide {
+  width: 100%;
+  position: absolute;
+  -webkit-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
+}
+
+.testimonials .slider .slide__content {
+  height: 100%;
+  width: 75%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testimonials .slider .slide__title {
+  font-size: 2.5rem;
+  color: #42495B;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .testimonials .slider .slide__title {
+    font-size: 2rem;
+  }
+}
+
+.testimonials .slider .slide__title::before {
+  content: "\201C";
+  font-size: 12rem;
+  position: absolute;
+  top: -60px;
+  left: -40px;
+  color: #407ADB;
+}
+
+@media (max-width: 767px) {
+  .testimonials .slider .slide__title::before {
+    font-size: 9rem;
+    top: -50px;
+    left: -30px;
+  }
+}
+
+.testimonials .slider .slide p {
+  font-size: 1.7rem;
+  font-weight: 100;
+  line-height: 1.8;
+  color: #7A839E;
+}
+
+@media (max-width: 767px) {
+  .testimonials .slider .slide p {
+    font-size: 1rem;
+  }
+}
+
+.testimonials .slider .slide .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials .slider .slide .person__image {
+  width: 10rem;
+  height: 10rem;
+  margin-right: 2rem;
+  border-radius: 100px;
+  background-image: url("https://www.proceplas.com/wp-content/uploads/2019/01/person2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media (max-width: 767px) {
+  .testimonials .slider .slide .person__image {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.testimonials .slider .slide .person h4 {
+  color: #42495B;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .testimonials .slider .slide .person h4 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonials .slider .slide .person address {
+    font-size: 1.3rem;
+  }
+}
+
+.testimonials .slider__button-left {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1001px;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #6FA0FD;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .testimonials .slider__button-left {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    left: 0rem;
+  }
+}
+
+.testimonials .slider__button-right {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 1001px;
+  width: 6rem;
+  height: 6rem;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #6FA0FD;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .testimonials .slider__button-right {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    right: 0rem;
+  }
+}
+
+.testimonials .dots {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.testimonials .dots__dot {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border-radius: 1000px;
+  border: none;
+  cursor: pointer;
+}
+
+.testimonials .dots__dot--active {
+  background-color: #42495B;
 }
 
 .footer {

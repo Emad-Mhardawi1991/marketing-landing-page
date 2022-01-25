@@ -8,31 +8,24 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Public+Sans:ital,wght@0,300;1,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="/dist/css/style.css">
+  <link rel="stylesheet" href="./dist/css/style.css">
   <title>Marketing app</title>
 </head>
 
 <body>
   <header class="header">
     <nav class="nav container">
-      <a href="/">
-        <img src="/images/svgs/logo.svg" alt="logo">
+      <a href="#" >
+        <img  src="./images/svgs/logo.svg" alt="logo">
       </a>
 
       <div class="hide-for-mobile">
-        <ul class="nav__links">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">Price</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
+        <ul class="nav__links" >
+          <li class="nav__link"><a href="#about-us-section">About Us</a></li>
+          <li class="nav__link"><a href="#services-section">Services</a></li>
+          <li class="nav__link"><a href="#price-section">Price</a></li>
+          <li class="nav__link"><a href="#testimonials-section">testimonials</a></li>
+          
         </ul>
       </div>
       <div class="nav__hamburger hide-for-desktop">
@@ -41,7 +34,7 @@
         <span></span>
       </div>
 
-      <button type="button" class="nav__button hide-for-mobile">Discover</button>
+      <button id="discover-btn" type="button" class=" button nav__button hide-for-mobile">Discover</button>
     </nav>
   </header>
 
@@ -50,14 +43,14 @@
     <div class="hero container">
       <div class="hero__image"></div>
       <div class="hero__text">
-        <h1> <span> SOCIAL MEDIA</span> FOR BUSINESS! </h1>
+        <h1 id="test" > <span> SOCIAL MEDIA</span> FOR BUSINESS! </h1>
         <p> PERFOMANCE BASED SOCIAL MEDIA AGENCY WE ARE LOREM MEDIA </p>
-        <button type="button" class="button"> Discover</button>
+        <button  type="button" class="button"> Discover</button>
       </div>
     </div>
   </section>
 
-  <section class="biography container">
+  <section id="about-us-section" class="biography container">
     <div class="biography__image"></div>
     <div class="biography__text">
       <h2>Who We Are</h2>
@@ -75,11 +68,11 @@
   </section>
 
 
-  <section class="services container">
+  <section id="services-section" class="services container">
     <h2>What We Offer</h2>
     <div class="services__cards">
       <div>
-        <img src="/images/svgs/media-management-icon.svg" alt="icon">
+        <img src="./images/svgs/media-management-icon.svg" alt="icon">
         <div class="text-content">
           <h4>SOCIAL MEDIA MANAGEMENT</h4>
           <p>Perfect for growing your brand’s social community and engage with the right
@@ -91,7 +84,7 @@
       </div>
 
       <div>
-        <img src="/images/svgs/social-media-campaign-icon.svg" alt="icon">
+        <img src="./images/svgs/social-media-campaign-icon.svg" alt="icon">
         <div class="text-content">
           <h4>SOCIALS GROWTH CAMPAIGN</h4>
           <p>Our social growth campaign will have your socials come alive.
@@ -102,7 +95,7 @@
       </div>
 
       <div>
-        <img src="/images/svgs/branding-icon.svg" alt="icon">
+        <img src="./images/svgs/branding-icon.svg" alt="icon">
         <div class="text-content">
           <h4>BRANDING & MEDIA</h4>
           <p>Done right, branding offers a company an edge over the competition. So what exactly is branding, and why is
@@ -113,7 +106,7 @@
       </div>
 
       <div>
-        <img src="/images/svgs/analysis.svg" alt="icon">
+        <img src="./images/svgs/analysis.svg" alt="icon">
         <div class="text-content">
           <h4>INFLUENCER MARKETING</h4>
           <p>We will pair your business with influencers that speak to your audience. Influencer Marketing is the most
@@ -124,7 +117,7 @@
       </div>
 
       <div>
-        <img src="/images/svgs/social-media.svg" alt="icon">
+        <img src="./images/svgs/social-media.svg" alt="icon">
         <div class="text-content">
           <h4>SOCIAL MEDIA PAID ADVERTISING</h4>
           <p>Our ad campaigns will bring you the results your looking for. From brand awareness campaigns to lead
@@ -138,7 +131,7 @@
       </div>
 
       <div>
-        <img src="/images/svgs/computer-icon.svg" alt="icon">
+        <img src="./images/svgs/computer-icon.svg" alt="icon">
         <div class="text-content">
           <h4>CONTENT MARKETING SERVICES</h4>
           <p>We can create and provide your company with the best content marketing for your socials to improve online
@@ -150,7 +143,7 @@
     </div>
   </section>
 
-  <section class="pricing">
+  <section id="price-section" class="pricing">
     <h4 class="pricing__title">Our pricing</h4>
     <div class="pricing__cards container">
       <div>
@@ -160,7 +153,7 @@
           consectetur adipiscing elit. Aenean nisl
           nibh, sagittis ac faucibus sit
         </p>
-        <button>See Details</button>
+        <button class="button">See Details</button>
       </div>
       <div>
         <h4>Gold Package</h4>
@@ -169,7 +162,7 @@
           consectetur adipiscing elit. Aenean nisl
           nibh, sagittis ac faucibus sit
         </p>
-        <button>See Details</button>
+        <button class="button">See Details</button>
       </div>
       <div>
         <h4>Platinum Package</h4>
@@ -178,13 +171,118 @@
           consectetur adipiscing elit. Aenean nisl
           nibh, sagittis ac faucibus sit
         </p>
-        <button>See Details</button>
+        <button class="button">See Details</button>
       </div>
     </div>
-
   </section>
 
-  <!-- <section class="testimonials"></section>*/ -->
+
+
+
+
+<section class="testimonials container">
+  <h2>Not Sure yet ? <br> <span>see what other people say about us</span> </h2>
+  <div class="slider">
+  <div class="slide">
+    <div class="slide__content">
+      <h3 class="slide__title">The last step to becoming a complete minimalist</h3>
+      <p>
+        Quisquam itaque deserunt ullam, quia ea repellendus provident, ducimus 
+        neque ipsam modi voluptatibus doloremque, corrupti laborum. 
+        Incidunt numquam perferendis veritatis neque repellendus. 
+        Lorem, ipsum dolor sit amet consectetur 
+        
+      </p>
+      <div class="person">
+        <div class="person__image"></div>
+        <div class="person__info">
+          <h4>Sara Jones</h4>
+          <address>Stockholm, Sweden</address>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="slide__content">
+      <h3 class="slide__title">Best financial decision ever!</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Accusantium quas quisquam non? Quas voluptate nulla minima 
+        deleniti optio ullam nesciunt, numquam corporis et asperiores 
+        laboriosam sunt, praesentium suscipit blanditiis.
+      </p> 
+      <div class="person">
+        <div class="person__image"></div>
+        <div class="person__info">
+          <h4>Sara Jones</h4>
+          <address>Stockholm, Sweden</address>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slide">
+    <div class="slide__content">
+      <h3 class="slide__title">Finally free from old-school banks</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Accusantium quas quisquam non? Quas voluptate nulla minima 
+        deleniti optio ullam nesciunt, numquam corporis et asperiores 
+        laboriosam sunt, praesentium suscipit blanditiis.
+      <div class="person">
+        <div class="person__image"></div>
+        <div class="person__info">
+          <h4>Sara Jones</h4>
+          <address>Stockholm, Sweden</address>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  
+
+  <button class="slider__button-left"> ← </button>
+  <button class="slider__button-right"> → </button>
+
+  <div class="dots"></div>
+</div>
+</section>
+
+
+
+<!--
+ <section  id="testimonials-section" class=" container  testimonials">
+  <h2>Not Sure yet ? <br> see what other people say about us</h2>
+
+  <div class="slider">
+    <div class="slide">
+      <h3 class="slide__title">The last step to becoming a complete minimalist</h3>
+      <p>
+        Quisquam itaque deserunt ullam, quia ea repellendus provident, ducimus 
+        neque ipsam modi voluptatibus doloremque, corrupti laborum. 
+        Incidunt numquam perferendis veritatis neque repellendus. 
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Illo deserunt exercitationem deleniti.
+      </p>
+    </div>
+  </div>
+
+
+   <div class=" slide dlide-1">
+     <h5>really amazing service --1</h5>
+     <p>it was really nice working with them</p>
+   </div>
+
+
+   <button class="slider__button-left"> > </button>
+   <button class="slider__button-right"> > </button>
+  
+  -->
+ </section>
 
   <footer class="footer">
     <p class="footer__subscribe">Do you want to get <strong>Special News?</strong> </p>
@@ -204,10 +302,8 @@
 
     <p class="footer__copy">&copy; Copyright by Emad Mhardawi.</p>
   </footer>
+
+  <script src="./src/js/index.js"></script>
+
 </body>
-
-
-
-<script src="/src/js/index.js"></script>
-
 </html>

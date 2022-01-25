@@ -1,4 +1,207 @@
-.testimonials{
-    min-height: 600px;
-    background-color: gold;
+.testimonials {
+  h2 {
+    font-size: 5rem;
+    position: relative;
+    color: $darkGray;
+    margin-top: 8rem;
+    text-align: center;
+    @include breakpoint-up(x-large) {
+      font-size: 4rem;
+    }
+    @include breakpoint-up(large) {
+      font-size: 3rem;
+    }
+
+    &::before {
+      content: "TESTIMONIALS";
+      position: absolute;
+      top: -3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      font-weight: 300;
+      padding: 0;
+      color: blueviolet;
+    }
+
+    span {
+      font-size: 4rem;
+      font-weight: 300;
+      @include breakpoint-up(medium) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .slider {
+    max-width: 100rem;
+    margin: 0 auto;
+    min-height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint-up(medium) {
+      min-height: 40rem;
+    }
+
+    .slide {
+      width: 100%;
+      position: absolute;
+
+      transition: 0.8s ease-out;
+      &__content {
+        height: 100%;
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      &__title {
+        font-size: 2.5rem;
+        color: $darkGray;
+        @include breakpoint-up(medium) {
+          font-size: 2rem;
+        }
+        position: relative;
+        &::before {
+          content: "\201C";
+          font-size: 12rem;
+          position: absolute;
+          top: -60px;
+          left: -40px;
+          color: $primary_color;
+          @include breakpoint-up(medium) {
+            font-size: 9rem;
+            top: -50px;
+            left: -30px;
+          }
+        }
+      }
+      p {
+        font-size: 1.7rem;
+        font-weight: 100;
+        line-height: 1.8;
+        color: $lightGray;
+        @include breakpoint-up(medium) {
+          font-size: 1rem;
+        }
+      }
+
+      .person {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &__image {
+          width: 10rem;
+          height: 10rem;
+          margin-right: 2rem;
+          border-radius: 100px;
+          background-image: url("https://www.proceplas.com/wp-content/uploads/2019/01/person2.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+          @include breakpoint-up(medium) {
+            width: 5rem;
+            height: 5rem;
+          }
+        }
+
+        h4 {
+          color: $darkGray;
+          margin: 0;
+          @include breakpoint-up(medium) {
+            font-size: 1.3rem;
+          }
+        }
+
+        address {
+          @include breakpoint-up(medium) {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+
+    &__button-left {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      width: 6rem;
+      height: 6rem;
+      border-radius: 1001px;
+      font-weight: bold;
+      font-size: 2rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary_color_medium;
+      border: none;
+      color: white;
+      cursor: pointer;
+
+      @include breakpoint-up(medium) {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        left: 0rem;
+      }
+    }
+
+    &__button-right {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      border-radius: 1001px;
+      width: 6rem;
+      height: 6rem;
+      font-weight: bold;
+      font-size: 2rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary_color_medium;
+      border: none;
+      color: white;
+      cursor: pointer;
+      @include breakpoint-up(medium) {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        right: 0rem;
+      }
+    }
+  }
+
+  .dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    &__dot {
+      width: 15px;
+      height: 15px;
+      padding: 0;
+      border-radius: 1000px;
+      border: none;
+      cursor: pointer;
+      &--active {
+        background-color: $darkGray;
+      }
+    }
+  }
 }

@@ -1,5 +1,6 @@
 header{
-  background-color: rgba(128, 128, 128, 0.089)
+  background-color: gainsboro;
+  opacity: 1;
 }
 
 .nav{
@@ -31,7 +32,9 @@ header{
     
     a{
       color: $darkGray;
+      cursor: pointer;
       position: relative;
+      user-select: none;
       &::before{
         content: '';
         position: absolute;
@@ -89,3 +92,15 @@ header{
 
 }
 
+
+
+.sticky-nav{
+  background-color: gainsboro;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  opacity: 0;
+
+  transition: 0.5s  ease-out;
+  opacity: 1;
+}
